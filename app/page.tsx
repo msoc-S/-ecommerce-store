@@ -5,6 +5,9 @@ import { ProductGridHeader } from "@/components/product-grid-header";
 import { ProductCard } from "@/components/product-card";
 import { auth } from "@/auth";
 
+export const dynamic = 'force-dynamic';
+
+
 export default async function Home() {
     const session = await auth();
     const products = await prisma.product.findMany({
