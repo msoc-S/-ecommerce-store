@@ -30,7 +30,7 @@ export default async function InvoicePage({ params }: { params: { id: string } }
                     <p>{order.user.name || "Guest"}</p>
                     <p>{order.user.email}</p>
                     <p>{order.user.phone}</p>
-                    <p>{order.user.address}</p>
+                    <p>{order.shippingAddress || "No address provided"}</p>
                 </div>
                 <div className="text-right">
                     <h3 className="font-bold mb-2">Order Details:</h3>

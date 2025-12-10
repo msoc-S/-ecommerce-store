@@ -12,7 +12,7 @@ export function Search() {
     const { dict } = useI18n();
 
     const handleSearch = useDebouncedCallback((term: string) => {
-        const params = new URLSearchParams(searchParams);
+        const params = new URLSearchParams(searchParams.toString());
         if (term) {
             params.set("q", term);
         } else {

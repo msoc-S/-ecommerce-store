@@ -97,7 +97,10 @@ export default async function DiscountsPage() {
                                             <p className="text-xs text-primary">Applies to: {discount.product.title}</p>
                                         )}
                                     </div>
-                                    <form action={deleteDiscount.bind(null, discount.id)}>
+                                    <form action={async () => {
+                                        "use server";
+                                        await deleteDiscount(discount.id);
+                                    }}>
                                         <Button variant="destructive" size="sm">Delete</Button>
                                     </form>
                                 </CardContent>

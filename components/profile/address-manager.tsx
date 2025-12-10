@@ -21,7 +21,7 @@ import { useAlert } from "@/components/alert-provider";
 interface Address {
     id: string;
     label: string;
-    street: string;
+    street: string | null;
     city: string;
     state: string | null;
     zip: string | null;

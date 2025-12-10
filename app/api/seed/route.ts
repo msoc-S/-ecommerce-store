@@ -16,7 +16,6 @@ export async function GET() {
                 name: "Super Admin",
                 role: "SUPER_ADMIN",
                 phone: "070000000",
-                address: "Admin HQ"
             }
         });
 
