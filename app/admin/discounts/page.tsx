@@ -33,7 +33,10 @@ export default async function DiscountsPage() {
                         <CardTitle>Create New Discount</CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <form action={createDiscount} className="space-y-4">
+                        <form action={async (formData) => {
+                            "use server";
+                            await createDiscount(formData);
+                        }} className="space-y-4">
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="space-y-2">
                                     <Label htmlFor="percentage">Percentage (%)</Label>
