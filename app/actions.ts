@@ -67,7 +67,7 @@ export async function createOrder(
 
     // Calculate total and verify stock
     let total = 0;
-    const orderItemsData = [];
+    const orderItemsData: { productId: string; quantity: number; price: number }[] = [];
 
     for (const item of items) {
         const product = await prisma.product.findUnique({ where: { id: item.productId } });
