@@ -76,7 +76,7 @@ export async function addAddress(formData: FormData) {
         await prisma.address.create({
             data: {
                 ...validated.data,
-                userId: session.user.id,
+                userId: session.user.id!,
             },
         });
         revalidatePath("/profile");
