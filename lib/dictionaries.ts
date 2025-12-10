@@ -49,7 +49,7 @@ export const dictionary = {
         discount: "Discount",
         price: "Price",
         sale: "Sale",
-        sale: "Sale",
+
         inStock: "In Stock",
         addedToCart: "Added to Cart",
         outOfStock: "Out of Stock",
@@ -97,6 +97,7 @@ export const dictionary = {
         diyala: "Diyala",
         muthanna: "Muthanna",
         duhok: "Duhok",
+        noAddresses: "No addresses saved yet.",
     },
     ar: {
         store: "المتجر",
@@ -147,7 +148,7 @@ export const dictionary = {
         next: "التالي",
         discount: "خصم",
         price: "السعر",
-        sale: "تخفيضات",
+
         sale: "تخفيضات",
         inStock: "متوفر",
         addedToCart: "تمت الإضافة",
@@ -196,6 +197,7 @@ export const dictionary = {
         diyala: "ديالى",
         muthanna: "المثنى",
         duhok: "دهوك",
+        noAddresses: "لم يتم حفظ أي عنوان.",
     },
 };
 

@@ -21,7 +21,7 @@ export default async function OrdersPage() {
         <div className="container py-10 space-y-8">
             <h1 className="text-3xl font-bold tracking-tight">My Orders</h1>
             {orders.length === 0 ? (
-                <p className="text-muted-foreground">You haven't placed any orders yet.</p>
+                <p className="text-muted-foreground">You haven&apos;t placed any orders yet.</p>
             ) : (
                 <div className="space-y-6">
                     {orders.map((order) => (

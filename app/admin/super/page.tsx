@@ -63,8 +63,8 @@ export default async function SuperAdminPage() {
                     </CardHeader>
                     <CardContent className="space-y-4 text-sm text-muted-foreground">
                         <p><strong>Super Admin:</strong> Full access to everything.</p>
-                        <p><strong>Payment Auditor:</strong> Can verify payments and update order status to 'Payment Verified'.</p>
-                        <p><strong>Supplier:</strong> Can see verified orders and mark them as 'Shipped'.</p>
+                        <p><strong>Payment Auditor:</strong> Can verify payments and update order status to &apos;Payment Verified&apos;.</p>
+                        <p><strong>Supplier:</strong> Can see verified orders and mark them as &apos;Shipped&apos;.</p>
                         <p><strong>Content Editor:</strong> Can add and edit products.</p>
                     </CardContent>
                 </Card>

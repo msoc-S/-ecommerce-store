@@ -187,7 +187,7 @@ export function AddressManager({ addresses, onSelect, selectedId }: AddressManag
                                         <p className="text-sm text-muted-foreground">{address.landmark}</p>
                                     )}
                                     {address.notes && (
-                                        <p className="text-xs text-muted-foreground mt-1 italic">"{address.notes}"</p>
+                                        <p className="text-xs text-muted-foreground mt-1 italic">&quot;{address.notes}&quot;</p>
                                     )}
                                 </div>
                             </div>
