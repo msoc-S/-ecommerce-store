@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
 
 export const dynamic = 'force-dynamic';
 
@@ -8,27 +7,15 @@ export async function GET() {
         const envCheck = {
             hasAuthSecret: !!process.env.AUTH_SECRET,
             hasDatabaseUrl: !!process.env.DATABASE_URL,
-            databaseUrlStart: process.env.DATABASE_URL ? process.env.DATABASE_URL.substring(0, 10) + "..." : "MISSING",
+            // Show first few chars to verify it's loaded but keep secret
+            databaseUrlStart: process.env.DATABASE_URL ? process.env.DATABASE_URL.substring(0, 15) + "..." : "MISSING",
             nodeEnv: process.env.NODE_ENV,
         };
 
-        // Try to connect to DB
-        let dbStatus = "Checking...";
-        let userCount = -1;
-        try {
-            userCount = await prisma.user.count();
-            dbStatus = "Connected ✅";
-        } catch (e: any) {
-            dbStatus = "Failed ❌: " + e.message;
-        }
-
         return NextResponse.json({
-            status: "Diagnostic Report",
+            status: "Diagnostic Report (No DB)",
             environment: envCheck,
-            database: {
-                status: dbStatus,
-                userCount,
-            },
+            message: "If this loads, the issue is definitely the Prisma connection!",
             timestamp: new Date().toISOString(),
         });
     } catch (error: any) {
