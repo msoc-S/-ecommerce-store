@@ -12,6 +12,8 @@ import { OnboardingTour } from "@/components/onboarding-tour";
 import { ProfileHeader } from "@/components/profile/profile-header";
 import { OrderList } from "@/components/profile/order-list";
 
+export const dynamic = 'force-dynamic';
+
 export default async function ProfilePage() {
     const session = await auth();
     if (!session?.user) {

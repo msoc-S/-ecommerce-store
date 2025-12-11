@@ -13,6 +13,8 @@ import { getAddresses } from "@/actions/profile";
 import { AddressManager } from "@/components/profile/address-manager";
 import { Address } from "@prisma/client";
 
+export const dynamic = 'force-dynamic';
+
 export default function CheckoutPage() {
     const { items, total, clearCart } = useCart();
     const [loading, setLoading] = useState(false);
